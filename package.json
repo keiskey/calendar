@@ -1,0 +1,38 @@
+{
+  "name": "index",
+  "config": {
+    "key": "value",
+    "jade": "jade/config.json"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "hint": "echo at first, 'npm run setup'; echo $npm_package_config_key, $npm_package_name  # comment",
+    "jade": "jade --watch --pretty --obj $npm_package_config_jade --out . jade/*.jade  # -wPO <path> -o <files>",
+    "stylus": "stylus --watch --use nib --out css/ stylus/  # -w -u <path> -o <dest/> <src/>",
+    "babel": "babel es/ -w -d js/ --presets=es2015",
+    "server_livereloadx": "livereloadx -s  # -p 35729",
+    "server_browser-sync": "browser-sync start --server --files '*.html, *.css, *.js'  # --port 3000",
+    "server_php": "php -S localhost:5000",
+    "config:jade": "if [ ! -f $npm_package_config_jade ]; then echo {} > $npm_package_config_jade; fi",
+    "presetup": "mkdir -p jade stylus css es js; npm run config:jade",
+    "setup": "npm link browser-sync gulp gulp-babel gulp-jade gulp-plumber gulp-stylus nib stylus  # babelはローカルに置かないと動作しない",
+    "postsetup": "npm install",
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-stylus": "^2.6.0",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  }
+}
