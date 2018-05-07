@@ -15,7 +15,7 @@ html {
 }
 body {
   color: #999;
-  font-family: Ricty, Helvetica, serif;
+  font-family: Ricty, Helvetica, sans-serif;
 }
 body.html td {
   -webkit-text-stroke-width: 2px;
