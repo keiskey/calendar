@@ -1,3 +1,7 @@
+# Example
+https://keiskey.github.io/calendar/
+https://keiskey.github.io/calendar/#/2018/05
+
 # パラメーター管理
 ## location.search案
 - d … 日付。Dateオブジェクトを生成できれば何でも可。（例：2018/05）
