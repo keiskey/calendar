@@ -24,6 +24,7 @@ var days = function (datetime) {
 var weeks = Math.ceil((startDay + days) / 7);
 
 window.addEventListener("DOMContentLoaded", function (event) {
+  document.title = datetime.getFullYear() + "/" + ("00" + month).slice(-2);
   document.querySelector("h1.month").textContent = month;
   var tbody = document.querySelector("tbody");
   var thead = document.querySelector("thead");
@@ -50,7 +51,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
       var text = document.createElementNS(svg.namespaceURI, "text");
       text.setAttribute("dx", 12);
       text.setAttribute("dy", 4);
-      text.setAttribute("fill", "white");  // Safariでは属性値で指定しないと描画されない。
       text.textContent = count;
       svg.append(text);
       td.append(svg);

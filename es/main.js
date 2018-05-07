@@ -22,6 +22,7 @@ const days = ((datetime) => {
 const weeks = Math.ceil((startDay + days) / 7);
 
 window.addEventListener("DOMContentLoaded", (event) => {
+  document.title = datetime.getFullYear() + "/" + ("00" + month).slice(-2);
   document.querySelector("h1.month").textContent = month;
   const tbody = document.querySelector("tbody");
   const thead = document.querySelector("thead");
