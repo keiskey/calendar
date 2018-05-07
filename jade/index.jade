@@ -6,11 +6,12 @@ html(lang="ja")
     link(rel="stylesheet", href="../css/reset.css")
     link(rel="stylesheet", href="css/main.css")
     script(src="js/main.js")
-  body(style="width: #{width}#{unit}; height: #{height}#{unit}")
+  body.svg
     #wrapper
       h1.month
       table
-        tr.header
+        thead
           //- each name in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
           //-   th= name
+        tbody
           

@@ -1,3 +1,61 @@
+@import nib
+
+@page
+  size A3
+  margin 12mm 24mm
+
+@media screen
+  #wrapper
+    margin 2em
+
+html
+  font-size 16px
+
 body
-  overflow hidden
-  
+  color hsl(0, 0, 60%)
+  font-family Ricty
+  // html方式
+  &.html
+    td
+      // -webkit-text-stroke color
+      -webkit-text-stroke-width 2px
+      -webkit-text-fill-color transparent
+  // svg方式
+  &.svg
+    td
+      position relative
+      height 17vh
+    svg
+      size 100%
+      absolute left top
+      // text
+      dominant-baseline text-before-edge
+      fill white
+      stroke currentColor
+      stroke-width 4
+      stroke-linejoin round
+      paint-order stroke
+
+h1
+  font-size 6rem
+  font-weight bold
+  line-height 1
+table
+  table-layout fixed
+  width 100%
+  margin-top 36px
+  th
+    font-size 2rem
+    text-align center
+    color hsl(0, 0%, 75%)
+    border-bottom 2px solid hsl(0, 0%, 75%)
+  td
+    font-size 4rem
+    border-bottom 2px solid hsl(0, 0%, 75%)
+    + td
+      border-left 2px dashed hsl(0, 0%, 75%)
+.sat
+  color rgb(0, 160, 233)
+.sun
+  color rgb(230, 0, 18)
+  // background hsla(0, 100%, 80%, 0.2)
