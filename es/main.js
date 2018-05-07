@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       const text = document.createElementNS(svg.namespaceURI, "text");
       text.setAttribute("dx", 12);
       text.setAttribute("dy", 4);
+      text.setAttribute("fill", "white");  // Safariでは属性値で指定しないと描画されない。
       text.textContent = count;
       svg.append(text);
       td.append(svg);
