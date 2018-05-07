@@ -15,7 +15,7 @@ html
 
 body
   color hsl(0, 0, 60%)
-  font-family Ricty
+  font-family Ricty, Helvetica, serif
   // html方式
   &.html
     td
@@ -30,13 +30,13 @@ body
     svg
       size 100%
       absolute left top
-      // text
-      dominant-baseline text-before-edge
-      fill white
-      stroke currentColor
-      stroke-width 4
-      stroke-linejoin round
-      paint-order stroke
+      text  // Safariではsvgからの継承だと反映されない。
+        dominant-baseline text-before-edge
+        fill white
+        stroke currentColor
+        stroke-width 4
+        stroke-linejoin round
+        paint-order stroke
 
 h1
   font-size 6rem
